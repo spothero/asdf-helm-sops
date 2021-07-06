@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-set -euo pipefail
+
+set -e
+set -o pipefail
 
 install_helmsops() {
   local install_type=$1
