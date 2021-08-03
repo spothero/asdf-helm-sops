@@ -10,7 +10,7 @@ install_helmsops() {
   local binary_path="$bin_install_path/helm-sops"
   local download_url=$(get_download_url $version $platform)
 
-  if [ "$TMPDIR" = "" ]; then
+  if [[ -z "${TMPDIR:-}" ]]; then
     local tmp_download_dir=$(mktemp -d -t helmsops_XXXXXX)
   else
     local tmp_download_dir=$TMPDIR
